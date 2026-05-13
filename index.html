@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Kite Agency</title>
+    
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="about.css">
+<link rel="stylesheet" href="service.css">
+<link rel="stylesheet" href="contact.css">
+<link rel="stylesheet" href="nav.css">
+<body>
+   
+    <nav id="nav">
+        <span onclick="bull()"class="showmenu"><i class="fa-solid fa-bars"></i></span>
+        <img src="logo.png"alt=""class="nav-logo">
+        <ul id="uls">
+            <a href="#home"><li class="hidden-text slide-left"><i class="fa-solid fa-house"></i></li></a>
+            <a href="#about"><li class="hidden-text slide-left"><i class="fa-solid fa-user"></i> </li></a>
+            <a href="#service"><li class="hidden-text slide-left"><i class="fa-solid fa-gear"></i> </li></a>
+            <a href="#contact"><li class="hidden-text slide-left"><i class="fa-solid fa-phone"></i>  <span class="navWord"> Contact </span></li></a>
+        </ul>
+        
+    </nav>
+    
+    <div id="home">
+    <div class="intro">
+    <h2 class="hidden-text scale-up">Hey there, I'm Joseph Acheampong</h2>
+    <span class="hidden-text slide-bottom">
+    <h2 class="hidden-text p">I am <span class="typed-text"></span><span class="cursor">&nbsp;</span></h2>
+      <span class="hidden-text a"> A frontend Developer crafting responsive, interactive, and user-friendly web experiences with HTML, CSS, JavaScript, and React.
+   <p><a href="onscroll.html"> <button class="hidden-text btn">Hire me</button></a></p>
+</span> 
+    </span>
+</div>
+    <div class="hidden-text slide-right slider" id="slider-container">
+        <img src="one (1).png" class="slider-img active">
+        <img src="one (2).png" class="slider-img">
+        <img src="one (3).png" class="slider-img">
+        <img src="one (4).png" class="slider-img">
+       
+       
+    </div>
+</div>
+<div id="about">
+    <div class="hidden-text scale-up header">About Me</div>
+    <img src="1000020196.jpg"alt=""class="hidden-text slide-left img1">
+   <div class="hidden-text slide-right info">
+    I'm a Full-Stack Developer passionate about building dynamic, user-friendly web applications. 
+    With expertise in front-end and back-end technologies, I create seamless digital experiences. 
+    I love problem-solving, clean code, and staying updated with the latest tech. 
+    Let’s build something amazing together!
+    <br>
+    
+   <a href="cv.pdf" download> <button class="hidden-text slide-bottom btn1">Download Resume</button></a><br><br>
+    <span class="hidden-text slide-right ul">
+        <a href="https://www.facebook.com/share/1BGEDYsDMC/"><span class="li"><i class="fa-brands fa-facebook"></i></span></a>
+      <a href="https://www.tiktok.com/@tkay325?is_from_webapp=1&sender_device=pc"> <span class="li"> <i class="fa-brands fa-tiktok"></i></span></a>
+       <a href="https://youtube.com/@tkay-ftl?si=ODZMgi7f4hPtwK2M"><span class="li"><i class="fa-brands fa-youtube"></i></span></a>
+      <a href="https://www.instagram.com/t_kayftl/"> <span class="li"><i class="fa-brands fa-instagram"></i></span></a>
+       
+      </span>
+   </div>
+
+</div>
+<div id="service">
+    <div class="container">
+        <h1>My Services</h1>
+        <div class="hidden-text services" id="services-list">
+            <!-- Services will be inserted here dynamically -->
+        </div>
+    </div>
+
+  
+    <script>
+        const services = [
+            { title: "Web Development", description: "Building responsive and modern websites tailored to your needs. Expertise in HTML, CSS, JavaScript, and popular frameworks like React and Vue.js.", image: "web.webp" },
+            { title: "UI/UX Design", description: "Creating user-friendly and visually appealing designs for applications, focusing on accessibility, usability, and seamless interactions.", image: "ux.webp" },
+            { title: "Custom Web Applications", description: "Developing custom web applications tailored to business needs, ensuring scalability, performance, and security", image: "app.webp" },
+            { title: "E-commerce Solutions", description: "Developing online stores with seamless user experience and secure payment integration.", image: "e-comm.webp" },
+           
+        ];
+
+        const servicesContainer = document.getElementById("services-list");
+
+        services.forEach((service, index) => {
+            const serviceDiv = document.createElement("div");
+            serviceDiv.classList.add("service");
+            serviceDiv.innerHTML = `<img src="${service.image}" alt="${service.title}"><h2>${service.title}</h2><p>${service.description}</p>`;
+            serviceDiv.style.animation = `fadeUp 1s ease-in-out ${index * 0.2}s both`;
+            servicesContainer.appendChild(serviceDiv);
+        });
+    </script>
+</div>
+<div id="contact">
+    <center>CONTACT ME</center>
+    <div class="contact">
+        <div class="hidden-text slide-left wee">
+            <p class="bold">Where to find me</p>
+            <p id="myloca">📍 Tema - Community Nine(9), Accra - Ghana</p>
+            <p><i class="fa-solid fa-envelope"></i> Email:<br>josephach828@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> Phone Number:<br>+233 558459582<br>+233 239319108</p><br>
+            <p>Follow me on social media or simply use the contact form below to get in touch</p>
+        </div>
+<form action="https://formsubmit.co/josephach828@gmail.com" method="POST" class="hidden-text">
+            <h4>Send me a message</h4>
+            <p><input required type="text" placeholder="Your Name" name="fullname" id="input"><i class="fa-solid fa-user" id="icon"></i></p> 
+            <p><input required type="email" placeholder="Your Email" name="email" id="input"><i class="fa-solid fa-envelope" id="icon"></i></p>
+            <p><textarea placeholder="Enter your message" class="text" name="message"></textarea></p>
+            <button type="submit" class="hidden-text slide-right btn2">SEND EMAIL</button>
+        </form>
+    </div>
+</div>
+<footer>
+    <img src="logo.png"alt="footer-logo"class="hidden-text scale-up ul"id="footer-logo"><br><br>
+    <span class="hidden-text slide-right ul">
+        <a href="https://www.facebook.com/share/1BGEDYsDMC/"><span class="li"><i class="fa-brands fa-facebook"></i></span></a>
+      <a href="https://www.tiktok.com/@tkay325?is_from_webapp=1&sender_device=pc"> <span class="li"> <i class="fa-brands fa-tiktok"></i></span></a>
+       <a href="https://youtube.com/@tkay-ftl?si=ODZMgi7f4hPtwK2M"><span class="li"><i class="fa-brands fa-youtube"></i></span></a>
+      <a href="https://www.instagram.com/t_kayftl/"> <span class="li"><i class="fa-brands fa-instagram"></i></span></a>
+       
+      </span>
+      <p class="footer-bottom">
+        2026 © All copyrights reserved Tech-kite official website
+      </p>
+</footer>
+    <script src="port.js"></script>
+</body>
+</html>

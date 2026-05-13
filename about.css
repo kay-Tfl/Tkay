@@ -1,0 +1,182 @@
+
+#about{
+    background-image: linear-gradient(45deg,rgba(0, 0, 0, 0.884),rgba(255, 255, 255, 0.507)), url(bg2.webp);
+    margin-top: 1%;
+    position: static;
+    background-attachment: fixed;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 2.5%;
+    padding-bottom: 15%;
+    border-radius: 10px;
+}
+.header{
+    text-align: center;
+    font-size: 65px;
+    color: #333;
+    text-shadow: 2px 2px 4px indianred;
+}
+.img1{
+    max-width: 100%;
+    width: 35%;
+    height: 480px;
+    border-radius: 25px;
+}
+.info{
+    margin-top: -25%;
+    width: 60%;
+    margin-left: 38%;
+    font-size: x-large;
+}
+
+
+.btn1 {
+    position: relative;
+    margin: 1%;
+    padding: 15px 35px;
+    font-size: 18px;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.btn1:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(255, 75, 43, 0.4);
+}
+
+/* Click ripple effect */
+.btn1::after {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: 0.6s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+.btn1:active::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+}
+.ul > a{
+    font-size: 25px;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    margin: 1%;
+    text-shadow: none;
+    color: aqua;
+    text-decoration: none;
+    transition: all 0.6s ease;
+  }
+  .ul:hover a{
+    filter: blur(3px);
+    opacity: 0.9;
+  
+  }
+  .ul a:hover{
+    transform: scale(1.2);
+    filter: blur(0px);
+    opacity: 1;
+    background-color: black;
+    color: indianred;
+  }
+  @media only screen and (min-width: 550px) and (max-width: 850px) {
+    #about{
+    
+        margin-left: 0%;
+        width: 100%;
+        margin-top: 1%;
+        overflow-x: hidden;
+        padding-top: 7%;
+        padding-left: 1%;
+        border-radius: 5px;
+    }
+    .header{
+        font-size: 55px;
+    }
+    .img1{
+        margin-top: 3%;
+        width: 40%;
+        height: 350px;
+    }
+    .info{
+        margin-top: -30%;
+        width: 55%;
+        margin-left: 42%;
+        font-size: large;
+        color: bisque;
+    }
+
+
+       .btn1 {
+           position: relative;
+           margin: 1%;
+           padding: 15px 30px;
+           font-size: 15px;
+
+       }  
+      .ul > a{
+        
+           font-size: 20px;
+           padding: 10px;
+       }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 549px) {
+    #about{
+    
+        margin-left: 0%;
+        width: 100%;
+        margin-top: 1%;
+        overflow-x: hidden;
+        padding-top: 10%;
+        padding-left: 1%;
+        border-radius: 5px;
+    }
+    .header{
+        font-size: 45px;
+    }
+    .img1{
+        margin-top: 0%;
+        margin-left: 0%;
+        width: 90%;
+        padding-left: 2%;
+        border-radius: 20%;
+        background-attachment: fixed;
+        height: 380px;
+    }
+    .info{
+        margin-top: 5%;
+        width: 95%;
+        margin-left: 5%;
+        font-size: large;
+        color: bisque;
+    }
+    marquee > img{
+        width: 180px;
+        height: 150px;
+       }
+
+       .btn1 {
+           position: relative;
+           margin: 3%;
+           padding: 15px 30px;
+           font-size: 15px;
+
+       }  
+      .ul > a{
+        
+           font-size: 18px;
+           padding: 10px;
+       }
+
+}
